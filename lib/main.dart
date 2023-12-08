@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-   MyApp()
+   const MyApp()
   );
 }
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
          body: SafeArea(
@@ -42,53 +42,67 @@ class MyApp extends StatelessWidget {
                 fontSize: 15.0
               ),
             ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10.0),
+              Card(
+                 shape: RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Colors.white,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(2.5)),
+                  ),
                 margin: EdgeInsetsDirectional.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.phone,
-                    size:15.0,
-                    color: Color.fromARGB(255, 240, 34, 154),
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text('7005-294-063',
-                    style: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                      fontFamily: 'Poppins',
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.phone,
+                      size:15.0,
+                      color: Color.fromARGB(255, 240, 34, 154),
                     ),
-                  ),    
-                ],
-              ), 
+                    SizedBox(
+                      width: 15.0,
+                    ),
+                    Text('7005-294-063',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.black,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),    
+                  ],
+                                ),
+                ), 
               ),
-                Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10.0),
+                Card(
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Colors.white,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(2.5)),
+                  ),
                 margin: EdgeInsetsDirectional.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.email,
-                    size:10.0,
-                    color: Color.fromARGB(255, 240, 34, 154),
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text('jagdislourembam@gmail.com',
-                    style: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                      fontFamily: 'Poppins',
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      size:10.0,
+                      color: Color.fromARGB(255, 240, 34, 154),
                     ),
-                  ),    
-                ],
-              ), 
+                    SizedBox(
+                      width: 15.0,
+                    ),
+                    Text('jagdislourembam@gmail.com',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.black,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),    
+                  ],
+                                ),
+                ), 
               ),
           ],
           )
