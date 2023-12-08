@@ -11,17 +11,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
-         body: SafeArea(
+         body: Center(
           child:Column(
+            mainAxisAlignment: MainAxisAlignment.center,
              children: <Widget>[
-               CircleAvatar(
+               const CircleAvatar(
               radius: 50.0,
               backgroundImage: AssetImage('images/lourembam.jpg'),
             ),
-             Text(
+             const Text(
               'Jagadish',
               style: TextStyle(
                 fontFamily: 'Poppins',
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
 
               ),
             ),
-             Text(
+             const Text(
               "FLUTTER DEVELOPER",
               style: TextStyle(
                 fontFamily: 'Poppins',
@@ -42,38 +44,31 @@ class MyApp extends StatelessWidget {
                 fontSize: 15.0
               ),
             ),
-              Card(
-                 shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    color: Colors.white,
+              Container(
+                color: Colors.white,
+                 padding: const EdgeInsets.all(10.0),
+                margin: const EdgeInsetsDirectional.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: const Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.phone,
+                    size:15.0,
+                    color: Color.fromARGB(255, 240, 34, 154),
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(2.5)),
+                  SizedBox(
+                    width: 10.0,
                   ),
-                margin: EdgeInsetsDirectional.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      size:15.0,
-                      color: Color.fromARGB(255, 240, 34, 154),
+                  Text('7005-294-063',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      color: Colors.black,
+                      fontFamily: 'Poppins',
                     ),
-                    SizedBox(
-                      width: 15.0,
-                    ),
-                    Text('7005-294-063',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                        color: Colors.black,
-                        fontFamily: 'Poppins',
-                      ),
-                    ),    
-                  ],
-                                ),
-                ), 
+                  ),    
+                ],
+              ), 
               ),
-                Card(
+                const Card(
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     color: Colors.white,
@@ -101,10 +96,10 @@ class MyApp extends StatelessWidget {
                       ),
                     ),    
                   ],
-                                ),
+                 ),
                 ), 
               ),
-          ],
+            ],
           )
         )
       ),
